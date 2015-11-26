@@ -1,5 +1,5 @@
 #include <iostream>
-
+USING NAMESPACE STD;
 int main()
 {
 	int ** tablica = new int *[3];
