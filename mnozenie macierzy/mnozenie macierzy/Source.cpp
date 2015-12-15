@@ -66,7 +66,7 @@ int main()
 	int il_cyfr2 = 0;
 	while (!plik2.eof())
 	{
-		plik2 >> cyfra;	
+		plik2 >> cyfra2;	
 		il_cyfr2++;
 	}
 	int kolumny2;
@@ -84,25 +84,20 @@ int main()
 		{
 			for (int j = 0; i < il_cyfr2; j++)
 			{
+				wynik = 0;
 				if (j % kolumny2 == 0)
 				{
 					plik2 >> m2;
 					plik1 >> m1;
 					wyni = m1*m2;
-					wynik = wynik + wyni;
-					plik3 << wynik ;
-					
-
-
-
-
-
-
+					wynik +=	wyni;
+					plik4 << wynik;
 				}
 				else
 				{
 					plik2 >> m2;
 				}
+
 			}
 			plik2.clear();
 			plik2.seekg(0, ios::beg);
@@ -113,6 +108,7 @@ int main()
 	plik3.close();
 	plik1.close();
 	plik2.close(); 
+	plik4.close();
 	
 	return 0;
 }
